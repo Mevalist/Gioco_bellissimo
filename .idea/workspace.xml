@@ -4,55 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c007cd9c-29a8-42dd-8070-bcfc085e97cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gioco_bellissimo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/backgrd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/background_bellissimo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/firstLVL_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/firstLVL_sprite_newTexture1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/kekko_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_one_data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_one_data_ext1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/menu_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/menu_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/pause_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/sound_button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/urm_buttons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/volume_buttons.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/EnemyManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/KEKKO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/GameStates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/Statemethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/inputs/KeyBoardInputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/inputs/MouseInputs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/levels/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/levels/LevelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/GameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/MenuButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/PauseButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/PauseOverlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/SoundButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/UrmButtons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/VolumeButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/HelpMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
+    <list default="true" id="c007cd9c-29a8-42dd-8070-bcfc085e97cc" name="Changes" comment="gioco quasi fattp">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +49,7 @@
       <recent name="C:\Users\ricca\IdeaProjects\gioco_bellissimo\res" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-19.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -122,7 +75,19 @@
       <option name="presentableId" value="Default" />
       <updated>1709371945738</updated>
     </task>
+    <task id="LOCAL-00001" summary="gioco quasi fattp">
+      <created>1710832211716</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710832211716</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="gioco quasi fattp" />
+    <option name="LAST_COMMIT_MESSAGE" value="gioco quasi fattp" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gioco_bellissimo$Main.ic" NAME="Main Coverage Results" MODIFIED="1710776417489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
