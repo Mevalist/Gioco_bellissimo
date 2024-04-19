@@ -1,0 +1,95 @@
+
+package ui;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+
+import gamestates.GameStates;
+import gamestates.Playing;
+import main.Game;
+import utils.LoadSave;
+
+import static utils.Constants.UI.URMButtons.URM_SIZE;
+
+
+public class LevelCompletedOverlay {
+
+    private Playing playing;
+    private UrmButtons menu, next;
+    private BufferedImage img;
+    private int bgX, bgY, bgW, bgH;
+
+    public LevelCompletedOverlay(Playing playing) {
+        this.playing = playing;
+        initImg();
+        initButtons();
+    }
+
+    private void initButtons() {
+        int menuX = (int) (360 * Game.SCALE);
+        int nextX = (int) (440 * Game.SCALE);
+        int y = (int) (220 * Game.SCALE);
+        next = new UrmButtons(nextX, y, URM_SIZE, URM_SIZE, 0);
+        menu = new UrmButtons(menuX, y, URM_SIZE, URM_SIZE, 2);
+    }
+
+    private void initImg() {
+        img = LoadSave.GetSpriteAtlas(LoadSave.LEVEL_COMPLETED);
+        bgW = (int) (img.getWidth() * Game.SCALE);
+        bgH = (int) (img.getHeight() * Game.SCALE);
+        bgX = Game.GAME_WIDTH / 2 - bgW / 2;
+        bgY = (int) (75 * Game.SCALE);
+    }
+
+    public void draw(Graphics g) {
+        g.setColor(new Color(0, 0, 0, 200));
+        g.fillRect(0, 0, Game.GAME_WIDTH, Game.GAME_HEIGHT);
+
+        g.drawImage(img, bgX, bgY, bgW, bgH, null);
+        next.draw(g);
+        menu.draw(g);
+    }
+
+    public void update() {
+        next.update();
+        menu.update();
+    }
+
+    private boolean isIn(UrmButtons b, MouseEvent e) {
+        return b.getBounds().contains(e.getX(), e.getY());
+    }
+
+    public void mouseMoved(MouseEvent e) {
+        next.setMouseOver(false);
+        menu.setMouseOver(false);
+
+        if (isIn(menu, e))
+            menu.setMouseOver(true);
+        else if (isIn(next, e))
+            next.setMouseOver(true);
+    }
+
+    public void mouseReleased(MouseEvent e) {
+        if (isIn(menu, e)) {
+            if (menu.isMousePressed()) {
+                playing.resetAll();
+                GameStates.state = GameStates.MENU;
+            }
+        } else if (isIn(next, e))
+            if (next.isMousePressed())
+                playing.loadNextLvl ();
+
+        menu.resetBools();
+        next.resetBools();
+    }
+
+    public void mousePressed(MouseEvent e) {
+        if (isIn(menu, e))
+            menu.setMousePressed(true);
+        else if (isIn(next, e))
+            next.setMousePressed(true);
+    }
+
+}

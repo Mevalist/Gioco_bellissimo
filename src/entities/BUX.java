@@ -1,25 +1,22 @@
 package entities;
+
 import main.Game;
 
-import java.awt.*;
 import java.awt.geom.Rectangle2D;
 
-import static utils.Constants.Directions.LEFT;
 import static utils.Constants.Directions.RIGHT;
 import static utils.Constants.EnemyConstants.*;
-import static utils.HelpMethod.*;
-
-public class KEKKO extends Enemy{
+public class BUX extends Enemy{
     private int attackBoxOffsetX;
-    public KEKKO(float x, float y) {
-        super (x, y, KEKKO_SIZE, KEKKO_SIZE, KEKKO);
-        initHitbox (22,  17);
-        initAttackBox();
+    public BUX(float x, float y) {
+        super (x, y, BUX_SIZE, BUX_SIZE, BUX);
+        initHitbox (22, 56);
+        initAttacBox();
     }
 
-    private void initAttackBox() {
-        attackBox = new Rectangle2D.Float (x, y, (int)(30* Game.SCALE),  (int)(17* Game.SCALE));
-        attackBoxOffsetX = (int)(Game.SCALE * 4);
+    private void initAttacBox() {
+        attackBox = new Rectangle2D.Float (x, y, (int)(Game.SCALE * 30), (int)(Game.SCALE * 56));
+        attackBoxOffsetX = (int)(Game.SCALE * 38);
     }
 
     private void updateMove(int[][] lvlData, Player player){
@@ -34,7 +31,6 @@ public class KEKKO extends Enemy{
                     NewState (RUNNING);
                     break;
                 case RUNNING:
-
                     if (canSeePlayer (lvlData, player)){
                         turnTowardPlayer (player);
                         if(isPlayerCloseToAttack (player)){
@@ -47,9 +43,7 @@ public class KEKKO extends Enemy{
                     if(aniIndex == 0){
                         attackChecked = false;
                     }
-
-                    if(aniIndex == 2 && !attackChecked){
-
+                    if(aniIndex == 7 && !attackChecked){
                         checkPlayerHit(attackBox, player);
                     }
                     break;
@@ -68,7 +62,6 @@ public class KEKKO extends Enemy{
         attackBox.x = hitbox.x - attackBoxOffsetX;
         attackBox.y = hitbox.y;
     }
-
     public int flipX(){
         if(walkDir == RIGHT){
             return width;

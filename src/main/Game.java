@@ -1,17 +1,19 @@
 package main;
 
 import entities.Player;
+import gamestates.GameOptions;
 import gamestates.GameStates;
 import gamestates.Menu;
 import gamestates.Playing;
 import levels.LevelManager;
+import ui.AudioOptions;
 
 import java.awt.*;
 import java.nio.file.LinkOption;
 
 public class Game implements Runnable{
-
-
+    private AudioOptions audioOptions;
+    private GameOptions options;
     private GameWindow gamewindow;
     private GamePanel gamepanel;
     private Thread gameThread;
@@ -31,15 +33,17 @@ public class Game implements Runnable{
         initClasses();
         gamepanel = new GamePanel (this);
         gamewindow = new GameWindow (gamepanel);
+        gamepanel.setFocusable (true);
         gamepanel.requestFocus ();
 
         startGameLoop ();
     }
 
     private void initClasses() {
-
+        audioOptions = new AudioOptions ();
         menu = new Menu (this);
         playing = new Playing (this);
+        options = new GameOptions (this);
     }
 
     private void startGameLoop(){
@@ -56,7 +60,7 @@ public class Game implements Runnable{
         long previousTime = System.nanoTime ();
         int frames = 0;
         int update = 0;
-
+    
         double deltaU = 0;
         double deltaF = 0;
 
@@ -98,6 +102,8 @@ public class Game implements Runnable{
                 playing.update ();
                 break;
             case OPTIONS:
+                options.update ();
+                break;
             case QUIT:
             default:
                 System.exit (0);
@@ -112,6 +118,9 @@ public class Game implements Runnable{
                 break;
             case PLAYING:
                 playing.draw (g);
+                break;
+            case OPTIONS:
+                options.draw (g);
                 break;
             default:
                 break;
@@ -129,5 +138,13 @@ public class Game implements Runnable{
     }
     public Playing getPlaying(){
         return playing;
+    }
+
+    public GameOptions getOptions() {
+        return options;
+    }
+
+    public AudioOptions getAudioOptions() {
+        return audioOptions;
     }
 }
