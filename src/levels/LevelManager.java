@@ -1,6 +1,7 @@
 package levels;
 
 import gamestates.GameStates;
+import main.Credits;
 import main.Game;
 import utils.LoadSave;
 
@@ -56,6 +57,7 @@ public class LevelManager {
         lvlIndex++;
         if(lvlIndex >= levels.size ()){
             lvlIndex = 0;
+            new Credits ();
             GameStates.state = GameStates.MENU;
         }
         Level newLevel = levels.get (lvlIndex);
@@ -71,5 +73,9 @@ public class LevelManager {
 
     public int getAmountOfLevels(){
         return levels.size ();
+    }
+
+    public int getLvlIndex() {
+        return lvlIndex;
     }
 }

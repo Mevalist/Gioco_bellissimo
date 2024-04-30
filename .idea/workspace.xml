@@ -5,58 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c007cd9c-29a8-42dd-8070-bcfc085e97cc" name="Changes" comment="gioco quasi fattp">
-      <change afterPath="$PROJECT_DIR$/res/bux_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/dalmatocannon_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/death_screen.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/healt_power_bar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_completed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/level_one_data_ext1.2_width.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/lvls/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/options_background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/pause.background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/plasmaball_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player_sprite_update1.0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/potion_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/texture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/trap_sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/BUX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gamestates/GameOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/DalmatoCannon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/GameContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/ObjectManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/Potion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/Projectiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/objects/Spike.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/AudioOptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/GameOverOverlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/Jacquard12Charted-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/attack1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/attack2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/attack3.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/die.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/gameover.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/jump.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/level1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/level2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/lvlcompleted.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/audio/menu.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/deathcounter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/audio/AudioPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Credits.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/firstLVL_sprite_newTexture1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/kekko_sprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/kekko_sprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/level_one_data.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/level_one_data_ext1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/pause_background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/EnemyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/EnemyManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/KEKKO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/KEKKO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputs/KeyBoardInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/KeyBoardInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/MouseInputs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/State.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/levels/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/LevelManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/AudioOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AudioOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/GameOverOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameOverOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/MenuButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/PauseOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PauseOverlay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HelpMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HelpMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/VolumeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/VolumeButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,6 +52,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4d5d2be8-ce66-405a-8e16-3a245cee7f56" />
+        <option name="url" value="https://github.com/Mevalist/gioco_bellissimo.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -93,16 +82,19 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricca/IdeaProjects/PlatformerTutorial-ep_16.2&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ricca/IdeaProjects/PlatformerTutorial-ep_16.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ricca\IdeaProjects\gioco_bellissimo\res" />
+      <recent name="C:\Users\ricca\IdeaProjects\gioco_bellissimo\res\audio" />
       <recent name="C:\Users\ricca\IdeaProjects\gioco_bellissimo\res\lvls" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Game">
     <configuration name="Game" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/.jdks/openjdk-19.0.2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -148,17 +140,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gioco quasi fattp" />
     <option name="LAST_COMMIT_MESSAGE" value="gioco quasi fattp" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/Game.java</url>
-          <line>118</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gioco_bellissimo$Main.ic" NAME="Main Coverage Results" MODIFIED="1710776417489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -1,5 +1,6 @@
 package entities;
 
+import audio.AudioPlayer;
 import gamestates.Playing;
 import main.Game;
 import utils.LoadSave;
@@ -7,6 +8,8 @@ import utils.LoadSave;
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 import static utils.Constants.*;
 import static utils.Constants.ObjectConstants.GetSpriteAmount;
@@ -27,6 +30,14 @@ public class Player extends Entity{
 
     private final  float MAXFALLINGSPEED = 7.9f;
 
+    // DEATH COUNTER
+
+    private BufferedImage deathCImg;
+    private int deathCounterWith = (int)(32 * Game.SCALE);
+    private int deathCounterHeight = (int)(48 * Game.SCALE);
+    private int deathCounterX = (int)(760 * Game.SCALE);
+    private int deathCounterY = (int)(20 * Game.SCALE);
+    private int deathcounter = 0;
     // STATUS BAR
     private BufferedImage statusBarImg;
     private int statusBarWidth = (int)(192 * Game.SCALE);
@@ -71,15 +82,19 @@ public class Player extends Entity{
 
     public void update(){
         updateHealth ();
-
+        //System.out.println (deathcounter);
         if(currentHealth <= 0){
             if(state != DIE){
                 state = DIE;
                 aniTick = 0;
                 aniIndex = 0;
                 playing.setPlayerDying(true);
+                playing.getGame().getAudioPlayer().playEffect(AudioPlayer.DIE);
+                deathcounter++;
             } else if (aniIndex == GetSpriteAmount(DIE) && aniTick >= ANI_SPEED_PLAYER - 1) {
                 playing.setGameOver(true);
+                playing.getGame().getAudioPlayer().stopSong();
+                playing.getGame().getAudioPlayer().playEffect(AudioPlayer.GAMEOVER);
             } else
                 updateAnimationTick();
 
@@ -120,6 +135,7 @@ public class Player extends Entity{
         attackChecked = true;
         playing.chechEnemyHit(attackBox);
         playing.checkObjHit(attackBox);
+        playing.getGame().getAudioPlayer().playAttackSound ();
     }
 
     private void updateAttackBox() {
@@ -139,12 +155,36 @@ public class Player extends Entity{
         g.drawImage (playerAnimation_idle[state][aniIndex], (int)(hitbox.x - xDrawOffset) - xLvlOffset + flipX, (int)(hitbox.y - yDrawOffset) /* -yLvlOffset*/, width * flipW, height, null);
         //drawHitbox (g, xLvlOffset, yLvlOffset);
         //drawAttackBox(g, xLvlOffset);
-        drawUI(g);
+        try {
+            drawUI(g);
+        } catch (IOException e) {
+            throw new RuntimeException (e);
+        } catch (FontFormatException e) {
+            throw new RuntimeException (e);
+        }
     }
-    private void drawUI(Graphics g) {
+    private void drawUI(Graphics g) throws IOException, FontFormatException {
         g.drawImage (statusBarImg, statusBarX, statusBarY, statusBarWidth, statusBarHeight, null);
         g.setColor (Color.red);
         g.fillRect (healthBarX + statusBarX, healthBarY + statusBarY, healthWidth, healthBarHeight);
+        g.drawImage (deathCImg, deathCounterX, deathCounterY, deathCounterWith, deathCounterHeight, null);
+
+        //Font cs = Font.createFont(Font.TRUETYPE_FONT, new File("C:\\Users\\ricca\\IdeaProjects\\gioco_bellissimo\\res\\Jacquard12Charted-Regular.ttf"));
+        //GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        //ge.registerFont(cs);
+
+        //System.out.println (cs.getFontName ());
+        //g.setFont (cs);
+        //g.setFont (new Font("Jacquard 12 Charted Regular", Font.PLAIN, 22));
+        g.setFont (new Font("", Font.PLAIN, 22));
+        if(deathcounter >= 100){
+            g.drawString (String.valueOf (deathcounter), (int)(deathCounterX + xDrawOffset), (int)(deathCounterY + deathCounterHeight - xDrawOffset));
+
+        }else if(deathcounter >= 10){
+            g.drawString (String.valueOf (deathcounter), (int)(deathCounterX + xDrawOffset* 2), (int)(deathCounterY + deathCounterHeight - xDrawOffset));
+        }else
+            g.drawString (String.valueOf (deathcounter), (int)(deathCounterX + deathCounterWith / 2 - xDrawOffset), (int)(deathCounterY + deathCounterHeight - xDrawOffset));
+
     }
 
     private void updatePosition() {
@@ -213,6 +253,7 @@ public class Player extends Entity{
         if(inAir){
             return;
         }
+        playing.getGame().getAudioPlayer().playEffect(AudioPlayer.JUMP);
         inAir = true;
         airSpeed = jumpSpeed;
     }
@@ -300,6 +341,7 @@ public class Player extends Entity{
         }
 
         statusBarImg = LoadSave.GetSpriteAtlas (LoadSave.HEALT_POWER_BAR);
+        deathCImg = LoadSave.GetSpriteAtlas (LoadSave.DEATH_COUNTER);
     }
 
     public void resetBool(){

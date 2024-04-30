@@ -38,6 +38,7 @@ public class LoadSave {
     public static final String PLASMA_BALL = "plasmaball_sprite.png";
     public static final String DEATH_SCREEN = "death_screen.png";
     public static final String OPTION_MENU = "options_background.png";
+    public static final String DEATH_COUNTER = "deathcounter.png";
     public static BufferedImage GetSpriteAtlas(String fileName){
         BufferedImage img = null;
         InputStream ins = LoadSave.class.getResourceAsStream ("/"+fileName);
