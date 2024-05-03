@@ -60,7 +60,7 @@ public class HelpMethod {
 
     private static boolean isTileSolid(int x, int y, int[][]lvlData){
         int value = lvlData[y][x];
-        if((value >= 48 || value < 0) || (value != 47 && value != 46)){
+        if((value >= 48 || value < 0) || (value != 47 && value != 46 && value != 45 && value != 44 && value != 43 && value != 42)){
             return true;
         }
         return false;

@@ -24,7 +24,7 @@ public class Credits extends JPanel implements ActionListener {
         this.setBackground (Color.black);
         fg.setResizable (false);
         fg.setSize (1204, 672);
-        fg.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        //fg.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
         fg.setLocationRelativeTo (null);
         fg.add(this);
         fg.setVisible (true);
@@ -49,6 +49,8 @@ public class Credits extends JPanel implements ActionListener {
                 "MARTINS DONATO NICOLAS FERRANTE\n" +
                 "SABATELLI RICCARDO\n\n" +
                 "MENZIONI ONOREVOLI\n" +
+                "KEKKOOO\n" +
+                "DALMATO DANIELE\n" +
                 "CAPUTO MARCO\n" +
                 "LUISI LUCA\n\n\n\n\n\n\n\n\n" +
                 "GRAZIE PER AVER GIOCATO A\n\n" +

@@ -55,6 +55,7 @@ public class LevelManager {
 
     public void LoadNextLevel(){
         lvlIndex++;
+
         if(lvlIndex >= levels.size ()){
             lvlIndex = 0;
             new Credits ();
